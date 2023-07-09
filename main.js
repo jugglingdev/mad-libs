@@ -42,6 +42,7 @@ form.addEventListener('submit', (event) => {
         food.focus();
     } else {
         madLibStoryDisplay();
+        removeCenterClass();
     }
 });
 
@@ -54,4 +55,8 @@ function madLibStoryDisplay() {
     .replace(`${bodyPart}`, bodyPart.value)
     .replace(`${verb}`, verb.value)
     .replace(`${food}`, food.value);
+};
+
+function removeCenterClass() {
+    madLibDisplay.classList.remove('center');
 };
