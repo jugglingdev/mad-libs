@@ -43,6 +43,7 @@ form.addEventListener('submit', (event) => {
     } else {
         madLibStoryDisplay();
         removeCenterClass();
+        scrollToMadLib();
     }
 });
 
@@ -60,3 +61,8 @@ function madLibStoryDisplay() {
 function removeCenterClass() {
     madLibDisplay.classList.remove('center');
 };
+
+function scrollToMadLib() {
+    madLibDisplay.scrollIntoView();
+    document.madLibDisplay.scrollIntoView();
+}
