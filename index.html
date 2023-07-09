@@ -9,44 +9,51 @@
     <script src="./main.js" defer></script>
 </head>
 <body>
-    <h1 class="center"><span class="nowrap">Mad Libs</span></h1>
-    <div class="container">
-        <h3 class="center">Fill out the form to see your <span class="nowrap">Mad Lib!</span></h3>
+    <header>
+        <h1 class="center"><span class="nowrap">Mad Libs</span></h1>
+    </header>
+    <section class="container">
+        <h2 class="center">Fill out the form to see your <span class="nowrap">Mad Lib!</span></h2>
         <hr>
         <form>
             <div class="form-group">
-                <label for="adj1">Adjective: </label>
+                <label for="adj1">Adjective:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <input type="text" id="adj1" name="adj1">
             </div>
             <div class="form-group">
-                <label for="noun">Noun: </label>
+                <label for="noun">Noun:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <input type="text" id="noun" name="noun">
             </div>
             <div class="form-group">
-                <label for="adj2">Adjective: </label>
+                <label for="adj2">Adjective:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <input type="text" id="adj2" name="adj2">
             </div>
             <div class="form-group">
-                <label for="clothing">Clothing: </label>
+                <label for="clothing">Clothing:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <input type="text" id="clothing" name="clothing">
             </div>
             <div class="form-group">
-                <label for="bodyPart"><span class="nowrap">Body Part: </span></label>
+                <label for="bodyPart"><span class="nowrap">Body Part:&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
                 <input type="text" id="bodyPart" name="bodyPart">
             </div>
             <div class="form-group">
-                <label for="verb">Verb: </label>
+                <label for="verb">Verb:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <input type="text" id="verb" name="verb">
             </div>
             <div class="form-group">
-                <label for="food">Food: </label>
+                <label for="food">Food:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <input type="text" id="food" name="food">
             </div>
 
-            <button class="submit" id="submit">Submit</button>
+            <a href="#mad-lib-story"><button class="submit" id="submit">Submit</button></a>
         </form>
         <hr>
-        <p class="mad-lib"></p>
-    </div>
+        <div id="mad-lib-story">
+            <p class="mad-lib center">Your story goes here.</p>
+        </div>
+    </section>
+    <footer>
+        <p class="center">Thanks for playing!</p>
+    </footer>
 </body>
 </html>
