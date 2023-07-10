@@ -110,7 +110,7 @@ form {
     margin: 0 auto;
     padding: var(--PADDING);
     width: clamp(
-        min(calc(100% - (var(--PADDING)) * 2), 300px), 
+        min(calc(100% - (var(--PADDING) * 2)), 300px), 
         90%, 
         600px
     );
@@ -172,7 +172,11 @@ input:focus {
 
 .mad-lib {
     margin: var(--MARGIN) auto;
-    width: clamp(320px, 85%, 500px);
+    width: clamp(
+        min(calc(100% - (var(--PADDING) * 2)), 300px), 
+        90%, 
+        600px
+    );
 }
 
 strong {
