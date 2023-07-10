@@ -179,6 +179,27 @@ strong {
     color: var(--DARK-FONT-COLOR);
 }
 
+/* || FOOTER */
+
+footer a:any-link {
+    color: var(--BUTTON-COLOR);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--FORM-COLOR);
+    text-decoration: underline;
+}
+
+footer a:active {
+    color: var(--DARK-FONT-COLOR);
+}
+
+footer img {
+    height: 1em;
+    width: 1em;
+}
+
 /* || SMALL SCREENS */
 
 @media screen and (max-width: 426px) {
