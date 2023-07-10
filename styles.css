@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
 
 /* || RESET */
+
 * {
     padding: 0;
     margin: 0;
@@ -13,6 +14,7 @@ input, button {
 }
 
 /* || UTILITIES */
+
 .center {
     text-align: center;
 }
@@ -22,6 +24,7 @@ input, button {
 }
 
 /* || VARIABLES */
+
 :root {
 
     /* FONTS */
@@ -47,10 +50,11 @@ input, button {
 
     /* TRANSITION */
     --TRANSITION: 0.3s ease-in-out;
-
+    --SCALE: scale(1.1);
 }
 
 /* || GENERAL STYLES */
+
 html {
     scroll-behavior: smooth;
 }
@@ -59,6 +63,8 @@ body {
     background-color: var(--BG-COLOR);
     color: var(--DARK-FONT-COLOR);
 }
+
+/* || HEADER */
 
 header, footer {
     margin: var(--MARGIN);
@@ -69,11 +75,16 @@ h1 {
     font-size: var(--LARGE-FONT);
 }
 
+/* || FORM */
+
 .container {
     margin: 0 auto;
     padding: var(--PADDING);
-    width: clamp(310px, 85%, 800px);
-
+    width: clamp(
+        min(calc(100% - (var(--MARGIN) * 2)), 310px), 
+        85%, 
+        800px
+    );
     background-color: var(--FORM-COLOR);
     color: var(--LIGHT-FONT-COLOR);
     border-radius: 2rem;
@@ -92,12 +103,17 @@ p {
 
 hr {
     margin: var(--MARGIN);
+    border: 1px solid var(--BORDER-COLOR);
 }
 
 form {
     margin: 0 auto;
     padding: var(--PADDING);
-    width: clamp(320px, 90%, 550px);
+    width: clamp(
+        min(calc(100% - (var(--PADDING)) * 2), 300px), 
+        90%, 
+        550px
+    );
 }
 
 .form-group {
@@ -112,6 +128,10 @@ form {
     font-size: var(--SMALL-FONT);
 }
 
+label {
+    line-height: 1.75em;
+}
+
 input {
     height: 2em;
     background-color: var(--INPUT-COLOR);
@@ -123,7 +143,7 @@ input {
 }
 
 input:focus {
-    transform: scale(1.1);
+    transform: var(--SCALE);
     transition: var(--TRANSITION);
 }
 
@@ -146,26 +166,33 @@ input:focus {
     background-color: var(--BUTTON-SCALE-COLOR);
     color: var(--LIGHT-FONT-COLOR);
 
-    transform: scale(1.1);
+    transform: var(--SCALE);
     transition: var(--TRANSITION);
 }
 
 .mad-lib {
-    width: clamp(320px, 85%, 500px);
     margin: var(--MARGIN) auto;
+    width: clamp(320px, 85%, 500px);
 }
 
 strong {
     color: var(--DARK-FONT-COLOR);
 }
 
-/* || SMALL */
-@media screen and (max-width: 420px) {
+/* || SMALL SCREENS */
+
+@media screen and (max-width: 426px) {
     :root {
         --LARGE-FONT: 3rem;
         --MEDIUM-FONT: 1.5rem;
         --SMALL-FONT: 1rem;
-        --PADDING: 0.25em;
-        --MARGIN: 0.25em;
+    }
+
+    .form-group {
+        justify-content: flex-start;
+    }
+
+    input {
+        width: 100%;
     }
 }
