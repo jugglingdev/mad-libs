@@ -112,7 +112,7 @@ form {
     width: clamp(
         min(calc(100% - (var(--PADDING)) * 2), 300px), 
         90%, 
-        550px
+        600px
     );
 }
 
