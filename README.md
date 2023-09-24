@@ -1,10 +1,10 @@
-# Title
+# Mad Libs
 
 This is a solution to the [Code Labs](https://www.codelabsdash.com/applicant/prework/project) Mad Libs project.
 
 ## Table of contents
 
-- [Title](#title)
+- [Mad Libs](#mad-libs)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [Screenshots](#screenshots)
